@@ -31,6 +31,7 @@ header {
     transition: 0.8s;
 }
 
+<<<<<<< HEAD
 /* Highlight section */
 #highlight-section {
     width: 70%;
@@ -38,12 +39,20 @@ header {
 }
 
 #highlight-section > h2 {
+=======
+#highlight-section{
+    width: 70%;
+    margin : 50px auto;
+}
+#highlight-section >h2{
+>>>>>>> 850f5a0018023ae19c41a074f2043642b56e8fb9
     text-shadow: 3px 3px 5px rgb(201, 142, 142);
     font-size: 50px;
     font-weight: 800;
     text-align: center;
     margin-bottom: 25px;
 }
+<<<<<<< HEAD
 
 #highlight-section > p {
     margin: 0 auto 25px auto;
@@ -65,11 +74,35 @@ header {
 }
 
 #cover-image-section img {
+=======
+#highlight-section >p{
+    margin: 0 auto;
+    width: 50%;
+    color:rgb(118, 118, 126);
+    text-align: center;
+    margin-bottom: 25px;
+
+}
+
+#buy-now-button{
+    display: flex;
+    justify-content:center;
+    margin-bottom: 25px;
+    
+}
+
+#cover-image-section{
+    width: 70%;
+    margin : 0 auto;
+}
+#cover-image-section img{
+>>>>>>> 850f5a0018023ae19c41a074f2043642b56e8fb9
     width: 100%;
     display: block;
     margin: 0 auto;
 }
 
+<<<<<<< HEAD
 /* Search section */
 #search-section {
     width: 70%;
@@ -77,6 +110,14 @@ header {
 }
 
 #search-section > h2 {
+=======
+#search-section{
+   width: 70%;
+   margin : 50px auto;
+}
+
+#search-section> h2{
+>>>>>>> 850f5a0018023ae19c41a074f2043642b56e8fb9
     text-align: center;
     margin-bottom: 25px;
 }
@@ -115,6 +156,7 @@ header {
     width: 30%;
     display: flex;
     justify-content: flex-end;
+<<<<<<< HEAD
 }
 
 /* Phone cards section */
@@ -184,4 +226,6 @@ header {
 
 .show-details-btn:hover {
     background-color: rgb(10, 88, 202) !important;
+=======
+>>>>>>> 850f5a0018023ae19c41a074f2043642b56e8fb9
 }
