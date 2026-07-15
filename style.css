@@ -24,6 +24,7 @@ header {
     background-color: rgb(15, 15, 117);
     cursor: pointer;
     transition: 0.8s;
+<<<<<<< HEAD
 }
 
 #highlight-section{
@@ -64,4 +65,6 @@ header {
     margin: 0 auto;
 }
 
+=======
+>>>>>>> f30ac1d7ad12173f83c38fc130542a49f1c4ccdf
 }
