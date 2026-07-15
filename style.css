@@ -1,0 +1,67 @@
+/* Header styles */
+* {
+    margin :0;
+    font-family: 'Poppins', sans-serif;
+    
+    body{
+        background-color: rgb(239, 226, 226);
+    };
+}
+header {
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.btn {
+    background-color: rgb(83, 83, 233);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+}
+.btn:hover {
+    background-color: rgb(15, 15, 117);
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+#highlight-section{
+    width: 70%;
+    margin : 50px auto;
+}
+#highlight-section >h2{
+    text-shadow: 3px 3px 5px rgb(201, 142, 142);
+    font-size: 50px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 25px;
+}
+#highlight-section >p{
+    margin: 0 auto;
+    width: 50%;
+    color:rgb(118, 118, 126);
+    text-align: center;
+    margin-bottom: 25px;
+
+}
+
+#buy-now-button{
+    display: flex;
+    justify-content:center;
+    margin-bottom: 25px;
+    
+}
+
+#cover-image-section{
+    border: 2px solid olivedrab;
+    width: 70%;
+    margin : 0 auto;
+}
+#cover-image-section img{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+}
