@@ -31,64 +31,29 @@ header {
     transition: 0.8s;
 }
 
-<<<<<<< HEAD
-/* Highlight section */
-#highlight-section {
-    width: 70%;
-    margin: 50px auto;
-}
-
-#highlight-section > h2 {
-=======
 #highlight-section{
     width: 70%;
     margin : 50px auto;
 }
 #highlight-section >h2{
->>>>>>> 850f5a0018023ae19c41a074f2043642b56e8fb9
     text-shadow: 3px 3px 5px rgb(201, 142, 142);
     font-size: 50px;
     font-weight: 800;
     text-align: center;
     margin-bottom: 25px;
 }
-<<<<<<< HEAD
-
-#highlight-section > p {
-    margin: 0 auto 25px auto;
-    width: 50%;
-    color: rgb(118, 118, 126);
-    text-align: center;
-}
-
-#buy-now-button {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 25px;
-}
-
-/* Cover image section */
-#cover-image-section {
-    width: 70%;
-    margin: 0 auto;
-}
-
-#cover-image-section img {
-=======
 #highlight-section >p{
     margin: 0 auto;
     width: 50%;
     color:rgb(118, 118, 126);
     text-align: center;
     margin-bottom: 25px;
-
 }
 
 #buy-now-button{
     display: flex;
     justify-content:center;
     margin-bottom: 25px;
-    
 }
 
 #cover-image-section{
@@ -96,28 +61,17 @@ header {
     margin : 0 auto;
 }
 #cover-image-section img{
->>>>>>> 850f5a0018023ae19c41a074f2043642b56e8fb9
     width: 100%;
     display: block;
     margin: 0 auto;
 }
 
-<<<<<<< HEAD
-/* Search section */
-#search-section {
-    width: 70%;
-    margin: 50px auto;
-}
-
-#search-section > h2 {
-=======
 #search-section{
    width: 70%;
    margin : 50px auto;
 }
 
 #search-section> h2{
->>>>>>> 850f5a0018023ae19c41a074f2043642b56e8fb9
     text-align: center;
     margin-bottom: 25px;
 }
@@ -156,16 +110,16 @@ header {
     width: 30%;
     display: flex;
     justify-content: flex-end;
-<<<<<<< HEAD
 }
 
-/* Phone cards section */
+/* Phone cards section (Fixed horizontal scroll with flex-wrap) */
 #phones-section {
     width: 70%;
     margin: 50px auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
+    flex-wrap: wrap; /* This prevents sliding left-right */
 }
 
 .phone-card {
@@ -226,6 +180,154 @@ header {
 
 .show-details-btn:hover {
     background-color: rgb(10, 88, 202) !important;
-=======
->>>>>>> 850f5a0018023ae19c41a074f2043642b56e8fb9
+}
+
+#loading-section {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.hidden{
+    display: none !important;
+}
+
+/* Loader Animation */
+.loader {
+  width: 60px;
+  aspect-ratio: 2;
+  --_g: no-repeat radial-gradient(circle closest-side,#000 90%,#0000);
+  background: 
+    var(--_g) 0%   50%,
+    var(--_g) 50%  50%,
+    var(--_g) 100% 50%;
+  background-size: calc(100%/3) 50%;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {
+    20%{background-position:0%   0%, 50%  50%,100%  50%}
+    40%{background-position:0% 100%, 50%   0%,100%  50%}
+    60%{background-position:0%  50%, 50% 100%,100%   0%}
+    80%{background-position:0%  50%, 50%  50%,100% 100%}
+}
+
+/* --- Modal Styles --- */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90%;
+    position: relative;
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: red;
+}
+
+.modal-content img {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.modal-content h3 {
+    margin-bottom: 10px;
+}
+
+/* --- New Footer Styles --- */
+footer {
+    background-color: #EAEAF2; /* Light color matching your image */
+    padding: 60px 0;
+    margin-top: 100px;
+}
+
+.footer-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.footer-brand h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+}
+
+.footer-brand p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.footer-social-btn {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.premium-btn {
+    background-color: #1a73e8 !important; /* Button color from image */
+    border-radius: 8px !important;
+}
+
+.footer-divider {
+    border: none;
+    border-top: 1px solid #d1d1d1;
+    margin-bottom: 40px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link-column a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.link-column a:hover {
+    color: #1a73e8;
 }

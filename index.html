@@ -6,21 +6,14 @@
     <title>My API Store</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<<<<<<< HEAD
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/946cabd75f.js" crossorigin="anonymous"></script>
-=======
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/946cabd75f.js" crossorigin="anonymous"></script>
->>>>>>> 850f5a0018023ae19c41a074f2043642b56e8fb9
 </head>
 <body>
     <header>
         <h1>My API Store</h1>
         <button class="btn">Sign Up</button>
-<<<<<<< HEAD
     </header>
 
     <main>
@@ -46,17 +39,22 @@
             <div id="search-container">
                 <div id="search-bar">
                     <i class="fa fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Search your phone here" />
+                    <input id="search-input-field" type="text" placeholder="Search your phone here" />
                 </div>
                 <div id="search-button">
-                    <button class="btn">Search</button>
+                    <button onclick="handleSearch()" class="btn">Search</button>
                 </div>
             </div>
         </section>
 
-        <!-- Phone cards section -->
+        <!-- this is the loading animation -->
+        <section id="loading-section">
+             <div id="loader-animation" class="loader hidden"></div>
+        </section>
+
+        <!-- card section -->
         <section id="phones-section">
-            <!-- Card 1 -->
+            <!-- card 1 -->
             <div class="phone-card">
                 <div class="phone-img-container">
                     <img src="iphone.png" alt="iphone-image">
@@ -64,10 +62,11 @@
                 <h3>Iphone 17 Pro Max</h3>
                 <p>There are many variations of passages of available, but the majority have suffered</p>
                 <span class="price">$ 999</span>
-                <button class="btn show-details-btn">Show Details</button>
+                <!-- Added working onClick event for default cards -->
+                <button onclick="handleShowDetails('apple_iphone_17_pro_max')" class="btn show-details-btn">Show Details</button>
             </div>
 
-            <!-- Card 2 -->
+            <!-- card 2 -->
             <div class="phone-card">
                 <div class="phone-img-container">
                     <img src="iphone.png" alt="iphone-image">
@@ -75,10 +74,10 @@
                 <h3>Iphone 17 Pro Max</h3>
                 <p>There are many variations of passages of available, but the majority have suffered</p>
                 <span class="price">$ 999</span>
-                <button class="btn show-details-btn">Show Details</button>
+                <button onclick="handleShowDetails('apple_iphone_17_pro_max')" class="btn show-details-btn">Show Details</button>
             </div>
 
-            <!-- Card 3 -->
+            <!-- card 3 -->
             <div class="phone-card">
                 <div class="phone-img-container">
                     <img src="iphone.png" alt="iphone-image">
@@ -86,41 +85,74 @@
                 <h3>Iphone 17 Pro Max</h3>
                 <p>There are many variations of passages of available, but the majority have suffered</p>
                 <span class="price">$ 999</span>
-                <button class="btn show-details-btn">Show Details</button>
+                <button onclick="handleShowDetails('apple_iphone_17_pro_max')" class="btn show-details-btn">Show Details</button>
             </div>
         </section>
     </main>
-=======
-</header>
-<main>
-    <!--highlighted section-->
-    <section id="highlight-section">
-        <h2>Apple Iphone 17 Pro Max</h2>
-        <p>
-            Apple iPhone is a line of smartphones designed and marketed by Apple Inc. It runs on Apple's iOS mobile operating system. The first iPhone was released on June 29, 2007, and since then, Apple has periodically released new iPhone models.
-        </p>
-        <div id="buy-now-button">
-        <button class="btn">Buy Now</button>
+
+    <!-- Modal for Show Details -->
+    <div id="details-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div id="modal-details-container">
+                <!-- Details will be injected here -->
+            </div>
         </div>
-    </section>
-    <!-- <!cover image section-->
- <section id="cover-image-section">
-    <img src="Iphone 17 pro max.png" alt="iphone-image" />
-</section>
-<!-- search section -->
- <section id ="search-section">
-    <h2>Search Your Phone  </h2>
-<div id="search-container">
-    <div id="search-bar">
-        <i class=" fa fa-solid fa-magnifying-glass"></i>
-        <input type="text" placeholder="Search your phone here" />
     </div>
-    <div id="search-button">
-        <button class="btn">Search</button>
-    </div>
-    </div>
-    </section>
-</main>
->>>>>>> 850f5a0018023ae19c41a074f2043642b56e8fb9
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h2>My API Store</h2>
+                    <p>Learn How to use API Store</p>
+                </div>
+                <div class="footer-social-btn">
+                    <div class="social-icons">
+                        <i class="fa-brands fa-facebook" style="color: #1877F2;"></i>
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <i class="fa-brands fa-instagram" style="color: #E4405F;"></i>
+                    </div>
+                    <button class="btn premium-btn">Join Premium</button>
+                </div>
+            </div>
+            
+            <hr class="footer-divider">
+            
+            <div class="footer-links">
+                <div class="link-column">
+                    <a href="#">Products</a>
+                    <a href="#">Browse Jobs</a>
+                    <a href="#">Remote Jobs</a>
+                    <a href="#">Company Jobs</a>
+                    <a href="#">Startup Jobs</a>
+                </div>
+                <div class="link-column">
+                    <a href="#">Products</a>
+                    <a href="#">Browse Jobs</a>
+                    <a href="#">Remote Jobs</a>
+                    <a href="#">Company Jobs</a>
+                    <a href="#">Startup Jobs</a>
+                </div>
+                <div class="link-column">
+                    <a href="#">Products</a>
+                    <a href="#">Browse Jobs</a>
+                    <a href="#">Remote Jobs</a>
+                    <a href="#">Company Jobs</a>
+                    <a href="#">Startup Jobs</a>
+                </div>
+                <div class="link-column">
+                    <a href="#">Products</a>
+                    <a href="#">Browse Jobs</a>
+                    <a href="#">Remote Jobs</a>
+                    <a href="#">Company Jobs</a>
+                    <a href="#">Startup Jobs</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
 </body>
 </html>
